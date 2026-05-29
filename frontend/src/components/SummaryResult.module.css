@@ -1,0 +1,33 @@
+.wrapper { display: flex; flex-direction: column; gap: 1rem; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.statsRow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+@media (max-width: 600px) { .statsRow { grid-template-columns: repeat(2, 1fr); } }
+
+.stat {
+  background: var(--surface-2); border-radius: var(--radius-md);
+  padding: 14px 12px; display: flex; flex-direction: column;
+  align-items: center; gap: 2px; border: 0.5px solid var(--border);
+}
+.highlight { background: var(--accent-dim); border-color: rgba(212, 184, 150, 0.25); }
+
+.statLabel { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); font-weight: 500; }
+.statValue { font-family: var(--font-mono); font-size: 22px; font-weight: 500; color: var(--text-primary); line-height: 1.2; }
+.highlight .statValue { color: var(--accent); }
+.statUnit { font-size: 11px; color: var(--text-tertiary); }
+
+.outputCard { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+.outputHeader { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 0.5px solid var(--border); background: var(--surface-2); }
+.outputLabel { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); font-weight: 500; }
+.actions { display: flex; gap: 6px; }
+
+.btn {
+  display: flex; align-items: center; gap: 6px;
+  background: transparent; border: 0.5px solid var(--border-hover);
+  border-radius: var(--radius-sm); padding: 5px 10px;
+  font-size: 12px; color: var(--text-secondary); cursor: pointer;
+  font-family: var(--font-sans); transition: background 0.15s, color 0.15s;
+}
+.btn:hover { background: var(--surface-2); color: var(--text-primary); }
+
+.summaryText { padding: 1.25rem 1.5rem; font-size: 15px; line-height: 1.8; color: var(--text-primary); white-space: pre-wrap; }

@@ -1,0 +1,26 @@
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+
+.group { display: flex; flex-direction: column; gap: 8px; }
+
+.labelRow { display: flex; justify-content: space-between; align-items: center; }
+.labelRow label { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
+
+.value {
+  font-family: var(--font-mono); font-size: 13px; font-weight: 500;
+  color: var(--accent); background: var(--accent-dim);
+  padding: 2px 8px; border-radius: 99px;
+}
+
+.slider {
+  width: 100%; -webkit-appearance: none; appearance: none;
+  height: 4px; background: var(--border-hover);
+  border-radius: 99px; outline: none; cursor: pointer;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent); cursor: pointer; transition: transform 0.15s;
+}
+.slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+.hint { font-size: 11px; color: var(--text-tertiary); }

@@ -1,0 +1,93 @@
+.wrapper { display: flex; flex-direction: column; gap: 8px; }
+
+.dropZone {
+  border: 1.5px dashed var(--border-hover);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+
+.dropZone:hover, .dragging {
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+
+.loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.dropZone p { font-size: 13px; line-height: 1.5; }
+.dropZone p strong { color: var(--text-primary); font-weight: 500; }
+
+.hint { font-size: 10px; color: var(--text-tertiary); letter-spacing: 0.3px; }
+
+.fileCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(92, 188, 138, 0.15); /* Subdued success background */
+  border-radius: var(--radius-md);
+  border: 0.5px solid rgba(92, 188, 138, 0.3);
+}
+
+.fileCard > i {
+  font-size: 20px;
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.fileDetails { flex: 1; min-width: 0; }
+
+.fileName {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileMeta {
+  display: block;
+  font-size: 10px;
+  color: var(--success);
+  margin-top: 2px;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-tertiary);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  transition: color 0.12s;
+}
+
+.clearBtn:hover { color: var(--danger); }
+.clearBtn i { font-size: 14px; }
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  padding: 8px 10px;
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-radius: var(--radius-sm);
+}
+
+.errorBanner i { font-size: 14px; flex-shrink: 0; }

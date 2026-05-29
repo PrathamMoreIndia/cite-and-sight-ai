@@ -1,0 +1,104 @@
+.wrapper { display: flex; flex-direction: column; gap: 10px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.btn {
+  padding: 8px 6px;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.12s;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-sans);
+}
+
+.btn:hover {
+  background: var(--surface);
+  border-color: var(--border-hover);
+}
+
+.active {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: var(--text-primary);
+  display: block;
+}
+
+.desc {
+  font-size: 9px;
+  font-weight: 300;
+  color: var(--text-tertiary);
+  display: block;
+}
+
+/* Forces active text to be dark brown/black so it's readable on your tan accent color */
+.active .name, .active .desc { color: #1a1400 !important; }
+
+/* Preview box */
+.preview {
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.previewRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.previewLabel {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.field {
+  font-size: 9px;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.previewText {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.inTextRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 6px;
+  border-top: 0.5px solid var(--border);
+}
+
+.inText {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: var(--accent);
+}

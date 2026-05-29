@@ -1,0 +1,46 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--surface);
+  border-bottom: 0.5px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s, color 0.15s;
+}
+
+.link:hover {
+  color: var(--text-primary);
+  background: var(--surface-2);
+}
+
+.active {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  padding: 6px 12px;
+  background: var(--accent-dim);
+  border-radius: var(--radius-sm);
+  /* Optional: Keep a bottom border if you prefer that over the background highlight */
+  /* border-bottom: 2px solid var(--accent); */
+}

@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+transformers
+torch
+moviepy
+pydub
+google-genai
+ffmpeg-python
+accelerate
+sentencepiece
+pdfplumber
+python-docx
